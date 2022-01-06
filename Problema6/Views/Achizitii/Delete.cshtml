@@ -1,0 +1,56 @@
+﻿@model Problema6.Models.Achizitie
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Achizitie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Nume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.Nume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefon.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefon.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAchizitie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAchizitie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pret)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pret)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
